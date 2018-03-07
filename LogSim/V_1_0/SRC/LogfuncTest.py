@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 import unittest
 
-from V_1_0.SRC.Logfunc import AndGate
+from Logfunc import AndGate
 
 
 class AndGateTest(unittest.TestCase):
@@ -10,14 +10,14 @@ class AndGateTest(unittest.TestCase):
         a.Input0 = False
         a.Input1 = False
         a.execute()
-        self.assertFalse(a.Output, "Class AndGate: Testcase 1 failed.")
+        self.assertFalse(a.Output, "Class AndGate: Testcase 1 failed.")                     # so
 
     def testcase_02(self):
         a = AndGate()
         a.Input0 = False
         a.Input1 = True
         a.execute()
-        self.assertEqual(False, a.Output, "Class AndGate: Testcase 2 failed.")
+        self.assertEqual(False, a.Output, "Class AndGate: Testcase 2 failed.")              # oder so
 
     def testcase_03(self):
         a = AndGate()
