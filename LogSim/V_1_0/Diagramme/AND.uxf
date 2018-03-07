@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>100</y>
+      <w>340</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>And
+--
++ Input0 : bool = False
++ Input1 : bool = False
++ Output : bool = False
++ Name : string = ''
+--
++ show() :
++ execute() :
++ __init__() :
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
