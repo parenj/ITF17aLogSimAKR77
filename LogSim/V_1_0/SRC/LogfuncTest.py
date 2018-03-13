@@ -10,28 +10,28 @@ class AndGateTest(unittest.TestCase):
         a.Input0 = False
         a.Input1 = False
         a.execute()
-        self.assertFalse(a.Output, "Class AndGate: Testcase 1 failed.")                     # so
+        self.assertFalse(a.Output, "Class AndGate Testcase 1 failed.")                     # so
 
     def testcase_02(self):
         a = AndGate()
         a.Input0 = False
         a.Input1 = True
         a.execute()
-        self.assertEqual(False, a.Output, "Class AndGate: Testcase 2 failed.")              # oder so
+        self.assertEqual(False, a.Output, "Class AndGate Testcase 2 failed.")              # oder so
 
     def testcase_03(self):
         a = AndGate()
         a.Input0 = True
         a.Input1 = False
         a.execute()
-        self.assertEqual(False, a.Output, "Class AndGate: Testcase 3 failed.")
+        self.assertEqual(False, a.Output, "Class AndGate Testcase 3 failed.")
 
     def testcase_04(self):
         a = AndGate()
         a.Input0 = True
         a.Input1 = True
         a.execute()
-        self.assertEqual(True, a.Output, "Class AndGate: Testcase 4 failed.")
+        self.assertEqual(True, a.Output, "Class AndGate Testcase 4 failed.")
 
 
 if __name__ == "__main__":
