@@ -1,5 +1,5 @@
 # -*- coding: utf8 -*-
-__version__ = '4.0'
+__version__ = '5.0'
 __author__ = 'Alexander Kopper (alex.kopper@web.de)'
 
 
@@ -110,6 +110,10 @@ class LogFunc:
         print(format_string.format("Input1", str(self.Input1)))
         print(format_string.format("Output", str(self.Output)))
         print(first_last)
+
+    def execute(self):
+        self.__Output = False
+
 
 
 class AndGate(LogFunc):

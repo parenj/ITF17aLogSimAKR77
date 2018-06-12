@@ -1,5 +1,5 @@
 # -*- coding: utf8 -*-
-__version__ = '4.0'
+__version__ = '5.0'
 __author__ = 'Alexander Kopper (alex.kopper@web.de)'
 
 
@@ -8,24 +8,8 @@ class LogFunc:
     This is the base class for calculating the logical functions.
     """
     def __init__(self):
-        self.__Input0 = False
-        self.__Input1 = False
         self.__Output = False
         self.__Name = "YaGate"
-
-    def __get_input0(self):
-        """
-        Returns the value of the first input signal.
-        :return: Input0
-        """
-        return self.__Input0
-
-    def __get_input1(self):
-        """
-        Returns the value of the second input signal.
-        :return: Input1
-        """
-        return self.__Input1
 
     def __get_output(self):
         """
@@ -41,23 +25,6 @@ class LogFunc:
         """
         return self.__Name
 
-    def __set_input0(self, value):
-        """
-        Sets the value of the first input signal
-        :param value: (bool) new value
-        :return: None
-        """
-        isinstance(value, bool)
-        self.__Input0 = value
-
-    def __set_input1(self, value):
-        """
-        Sets the value of the second input signal
-        :param value: (bool) new value
-        :return: None
-        """
-        isinstance(value, bool)
-        self.__Input1 = value
 
     def _set_output(self, value):
         """
@@ -111,21 +78,29 @@ class LogFunc:
         print(format_string.format("Output", str(self.Output)))
         print(first_last)
 
+    def execute(self):
+        self.__Output = False
+
+
 
 class AndGate(LogFunc):
     """
     This class calculates the logical AND function.
     """
-    def __init__(self):
-        self.__Name = "YaAndGate"
+    def __init__(self, nof_inputs):
+        self.__Output = False
+        self.__Name = "YaGate"
+        self.Nof_Inputs = nof_inputs
 
 
-    def execute(self):
+    def execute(self, InputListBool):
         """
         Computes the result of the logical connection of the two inputs.
         :return: None
         """
         self._set_output(False)
+        TempTrue = list.count(1)
+
         if True == self.Input0:
             if True == self.Input1:
                 self._set_output(True)
